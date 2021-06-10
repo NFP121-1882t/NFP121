@@ -20,7 +20,8 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
-
+    private Circle sun2;
+    
     /**
      * Constructor for objects of class Picture
      */
@@ -56,6 +57,7 @@ public class Picture {
         sun.changeSize(60);
         sun.makeVisible();
     }
+    
 
     /**
      * Change this picture to black/white display
@@ -79,8 +81,17 @@ public class Picture {
             wall.changeColor("red");
             window.changeColor("black");
             roof.changeColor("green");
-            sun.changeColor("yellow");
+            sun.changeColor("blue");
         }
     }
+    public void couche(int distance) {
+        
+
+        for (int i = 0; i < distance; i++) {
+            sun.moveVertical(+distance);
+            draw();
+        }
+    }
+   
 
 }
